@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// TODO: Initialize Firebase. (https://firebase.flutter.dev/docs/overview/#initializing-flutterfire)
 
 void main() {
   runApp(MyApp());
