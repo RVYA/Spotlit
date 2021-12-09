@@ -11,8 +11,8 @@ import '../models/spotlit_image.dart';
 const String _kUserImagesPath = "user-images";
 const String _kUserImageSuffix = "_uimg";
 
-const String _kPreferredImageFormat = "jpg";  // TODO: Experiment with user image format.
-const int _kPreferredImageWidth = 200;        // TODO: Experiment with user image width.
+const String _kPreferredImageFormat = "jpg";  // Experiment with user image format.
+const int _kPreferredImageWidth = 128;        // https://www.godaddy.com/garage/facebook-profile-picture-size-and-more/
 
 
 class UserAssetRepository {
