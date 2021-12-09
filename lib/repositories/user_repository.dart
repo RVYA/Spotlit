@@ -18,7 +18,7 @@ const String _kUsersCollection = "users";
 
 /// This repository is for accessing the _users_ collection in Firestore. It can
 /// also be used to generate an user instance from the data in the database. For
-/// which also uses the [ImageRepository].
+/// which also uses the [UserAssetRepository].
 class UserRepository {
   UserRepository._internal()
     : this._usersRef = FirebaseFirestore.instance.collection(_kUsersCollection);
@@ -89,7 +89,9 @@ class UserRepository {
   }
 
   /// Updates one field with the key [fieldKey] in the user document
-  /// with id [userId] to [value].
+  /// with id [userId] to [value]. If the image of the user is updated, _first_
+  /// image must be updated from the [UserAssetRepository], _then_ the download 
+  /// link must be updated from UserRepository.
   Future<void> updateUser({ //TODO: Review updateUser method.
     required String userId,
     required String fieldKey,
